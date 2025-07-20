@@ -1,17 +1,35 @@
 # AIR-QUALITY-FORECASTING-HYDERABAD
 A complete machine learning project to forecast daily PM2.5 pollution levels in Hyderabad using historical air quality and weather data (2019). This project includes data cleaning, exploratory data analysis (EDA), feature engineering, model training using Random Forest, model evaluation, and an optional Flask web app for live predictions.
 
+## ## Datasets Used
+
+We utilized two primary datasets for this project:
+
+- **Air Quality Data** (`city_day.csv`): Contains daily records of various air pollutants (including PM2.5, PM10, NO2, SO2, CO, O3, and more) for major Indian cities, including Hyderabad, for the year 2019.
+- **Weather Data** (`combined_output.csv`): Includes daily weather metrics such as temperature, humidity, rainfall, and wind speed, reported by district (Hyderabad in our case) for the same year.
+
+## Merging Process
+
+We filtered both datasets to include only records from Hyderabad during 2019. After handling missing values, we merged the two datasets on the `Date` field to create a unified dataset named **`hyd_merged_2019.csv`**. This new dataset contains daily pollution and weather variables for Hyderabad, serving as the foundation for our exploratory analysis and machine learning models.
+
 
 ## Project Workflow Overview
 
 Step	--             Description
 Data Collection	--Air quality (city_day.csv) & weather data (combined_output.csv) for Hyderabad
+
 Data Cleaning & Merging--	Filtered for Hyderabad (2019), handled missing values, merged into a single dataset
+
 Exploratory Data Analysis	-- Visualized trends, distributions, and correlations
+
 Feature Engineering-- 	Created lags, rolling stats, and calendar features
+
 Modeling-- 	Random Forest regression to predict PM2.5
+
 Model Evaluation--	Reported MAE, RMSE, R², and (optional) MAPE
+
 Saving & Deployment-- 	Model exported with joblib, Flask app for predictions
+
 Reporting/Documentation--	This notebook and README drafted for submission
 
 ---
